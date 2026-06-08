@@ -1,0 +1,31 @@
+<idea-plugin>
+    <id>com.ykoellmann.shortplate</id>
+    <name>Shortplate</name>
+    <vendor>Yannik Köllmann</vendor>
+
+    <description><![CDATA[
+        Assign keyboard shortcuts to any Live Template via the standard JetBrains Keymap dialog.
+        All Live Templates appear as actions under "Live Template Shortcuts" in Settings → Keymap.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity
+            implementation="com.ykoellmann.shortplate.LiveTemplateActionRegistrar"/>
+        <applicationService
+            serviceImplementation="com.ykoellmann.shortplate.ShortplateSettings"/>
+        <applicationConfigurable
+            parentId="editor"
+            instance="com.ykoellmann.shortplate.LiveTemplateShortcutsConfigurable"
+            id="com.ykoellmann.shortplate.configurable"
+            displayName="Shortplate"/>
+    </extensions>
+
+    <actions>
+        <group id="LiveTemplateShortcuts.Group"
+               class="com.ykoellmann.shortplate.LiveTemplateActionGroup"
+               text="Live Template Shortcuts"
+               popup="false"/>
+    </actions>
+</idea-plugin>
