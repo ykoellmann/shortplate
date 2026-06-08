@@ -2,6 +2,8 @@
 
 Assign keyboard shortcuts to any Live Template — directly via the standard JetBrains Keymap dialog.
 
+![Demo](media/demo.gif)
+
 ---
 
 ## The problem
@@ -26,12 +28,21 @@ first-class citizens in the Keymap dialog.
 
 ## Usage
 
-1. Open **Settings → Keymap**
-2. Expand **Plugins → Shortplate → Live Template Shortcuts**
-3. Find the template you want and assign a shortcut
-4. Use the shortcut anywhere in the editor — the template expands as usual
+1. Create a Live Template in **Settings → Editor → Live Templates**
+
+   ![Live Template](media/screenshot_live_template.png)
+
+2. Open **Settings → Keymap**, expand **Plugins → Shortplate and assign a shortcut
+
+   ![Keymap](media/screenshot_keymap.png)
+
+3. Use the shortcut anywhere in the editor — the template expands as usual
+
+   ![In Code](media/screenshot_in_code.png)
 
 To control which templates appear in the Keymap list, go to **Settings → Editor → Shortplate**.
+
+![Shortplate Settings](media/screenshot_shortplate.png)
 
 ---
 
